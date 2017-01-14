@@ -15,7 +15,7 @@ bool authentication(char user[],char pass[]){
             if((strcmp(user,username)==0) & (strcmp(pass,password)==0)) //provjera da li argumenti predati funkiciji odgovaraju nekoj od kombinacija zapisanim u fajlu
                 return true;
         }
-		return false;
+        return false;
     }
 }
 

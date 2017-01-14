@@ -1,4 +1,6 @@
 /.project
-/ETFBLsoftversko.cpb
+/ETFBLsoftversko.cbp
 /main.cpp
 ETFBLsoftversko.layout
+/bin/
+/obj/
