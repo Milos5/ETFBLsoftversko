@@ -26,7 +26,7 @@ ListOfPrices::ListOfPrices(){
         inputFile.close(); //Zatvaranje fajla
     }
     else{
-        cout << "Unable to open file.";
+        cout << "Fajl se ne moze otvoriti.";
         numberOfCategories = 0;
         numberOfPoints = 0;
     }
@@ -56,7 +56,7 @@ ListOfPrices::ListOfPrices(string fileLocation){
         inputFile.close(); //Zatvaranje fajla
     }
     else{
-        cout << "Unable to open file.";
+        cout << "Fajl se ne moze otvoriti.";
         numberOfCategories = 0;
         numberOfPoints = 0;
     }
@@ -126,8 +126,8 @@ void ListOfPrices::updatePrices(){
         inputFile.close(); //Zatvaranje fajla
     }
     else{
-        cout << "Unable to open file"; //Ukoliko nije moguce otvoriti fajl nece se mijenjati vrijednosti
-        cout << "Reverting to old values.";
+        cout << "Fajl se ne moze otvoriti."; //Ukoliko nije moguce otvoriti fajl nece se mijenjati vrijednosti
+        cout << "Vracanje na stare vrijednosti.";
     }
 };
 void ListOfPrices::updatePrices(string fileLocation){
@@ -160,7 +160,7 @@ void ListOfPrices::updatePrices(string fileLocation){
         inputFile.close(); //Zatvaranje fajla
     }
     else{
-        cout << "Unable to open file."; //Ukoliko nije moguce otvoriti fajl nece se mijenjati vrijednosti starih cijena
-        cout << "Reverting to old values.";
+        cout << "Fajl se ne moze otvoriti."; //Ukoliko nije moguce otvoriti fajl nece se mijenjati vrijednosti starih cijena
+        cout << "Vracanje na stare vrijednosti.";
     }
 };
