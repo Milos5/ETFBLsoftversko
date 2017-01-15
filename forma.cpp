@@ -43,8 +43,8 @@ void loginform(){
 			}
 			
 			if(authentication(usernm,passwd)!=true)			//Provjera validnosti unosa
-			cout<<"\t\tPogresano korisnicko ime ili pogresna lozinka!\n\n";
-			else {
+				cout<<"\t\tPogresano korisnicko ime ili pogresna lozinka!\n\n";
+			else{
 				doing=0;
 			}
 		}
