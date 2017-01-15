@@ -7,13 +7,14 @@
 #include"autentifikacija.h"
 #include"forma.h"
 using namespace std;
-void loginform(){
-	int doing=1;						//Pomocna promjenjiva
+string loginform(){
+	int doing=1;
+	int valid=0;						//Pomocna promjenjiva
+	char usernm[255]="";				//String za korisnocko ime
+    char passwd[255]="";				//String za lozinku
+	char id[255];                   //Pomocna promjenjiva za odabir opcije u formi za logovanje
 	while(doing){						//Petlja koja se izvrsav dok korisnik ne unese ispravne kredencijale ili odluci da napusti program
-		char usernm[255];				//String za korisnocko ime	
-		char passwd[255];				//String za lozinku
-		char id[255];					//Pomocna promjenjiva za odabir opcije u formi za logovanje
-		cout<<"\n\t\t\t > > >S.U.M.A< < <\n\n";						
+		cout<<"\n\t\t\t > > >S.U.M.A< < <\n\n";
 		cout<<"\t\tZa prijavu na sistem pritisnite -----> 1\n\n";		//opcije menija
 		cout<<"\t\tZa izlazak iz programa pritisnite----> 2\n";
 		cin>>id;
@@ -41,22 +42,23 @@ void loginform(){
 					break;
 				}
 			}
-			
 			if(authentication(usernm,passwd)!=true)			//Provjera validnosti unosa
-			cout<<"\t\tPogresano korisnicko ime ili pogresna lozinka!\n\n";
-			else {
+				cout<<"\t\tPogresano korisnicko ime ili pogresna lozinka!\n\n";
+			else{
 				doing=0;
+				valid=1;
 			}
 		}
-		if(strcmp(id,"2")==0)								//slucaj da je korisnik izabrao izlazak iz programa
+		if(strcmp(id,"2")==0){								//slucaj da je korisnik izabrao izlazak iz programa
 			doing=0;
-		if((strcmp(id,"1")!=0 && strcmp(id,"2")!=0))		//Ako kosrinisk unese bilo koju opciju koja nije ponudjena menijem
+			valid=0;
+		}
+		if((strcmp(id,"1")!=0 && strcmp(id,"2")!=0)){		//Ako kosrinisk unese bilo koju opciju koja nije ponudjena menijem
 			cout<<"Nevalidan unos\n\n";
-		
+			valid=0;
+		}
 	}
-	//ovde ce se u slucaju validnog unosa kredencijala pozivati funkcija za meni
+	if(valid==1)
+        return string(usernm); //vraca korisnicko ime korisnika koji se uspjenso logovao na sistem
+    return "0"; //vraca string "0" ukoliko je korisnik izabrao opciju za izlaz
 }
-	
-
-
-
