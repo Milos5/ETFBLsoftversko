@@ -16,6 +16,8 @@ bool authentication(char user[],char pass[]){
                 return true;
         }
     }
+    else
+        cout << "Fajl se ne moze otvoriti.";
     in.close();
     return false;
 }
