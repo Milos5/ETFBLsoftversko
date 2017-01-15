@@ -8,7 +8,8 @@
 #include"forma.h"
 using namespace std;
 void loginform(){
-	while(1){							//Petlja koja se izvrsav dok korisnik ne unese ispravne kredencijale ili odluci da napusti program
+	int doing=1;						//Pomocna promjenjiva
+	while(doing){						//Petlja koja se izvrsav dok korisnik ne unese ispravne kredencijale ili odluci da napusti program
 		char usernm[255];				//String za korisnocko ime	
 		char passwd[255];				//String za lozinku
 		char id[255];					//Pomocna promjenjiva za odabir opcije u formi za logovanje
@@ -44,11 +45,11 @@ void loginform(){
 			if(authentication(usernm,passwd)!=true)			//Provjera validnosti unosa
 			cout<<"\t\tPogresano korisnicko ime ili pogresna lozinka!\n\n";
 			else {
-			break;
+				doing=0;
 			}
 		}
 		if(strcmp(id,"2")==0)								//slucaj da je korisnik izabrao izlazak iz programa
-			break;
+			doing=0;
 		if((strcmp(id,"1")!=0 && strcmp(id,"2")!=0))		//Ako kosrinisk unese bilo koju opciju koja nije ponudjena menijem
 			cout<<"Nevalidan unos\n\n";
 		
