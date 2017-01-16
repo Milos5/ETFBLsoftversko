@@ -1,5 +1,5 @@
-#ifndef AUTENTIFIKACIJA_H
-#define AUTENTIFIKACIJA_H
+#ifndef AUTHENTICATION_H
+#define AUTHENTICATION_H
 #include<iostream>
 #include<fstream>
 #include<iomanip>

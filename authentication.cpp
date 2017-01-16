@@ -1,8 +1,7 @@
-
 #include"authentication.h"
 using namespace std;
 bool authentication(string user,string pass){
-	ifstream in("databas.txt"); //.txt fajl u kojem se nalaze imena korisnika i njehove lozinke
+	ifstream in("database.txt"); //.txt fajl u kojem se nalaze imena korisnika i njehove lozinke
 	char username[255];
 	char password[255];
 	if(in.is_open()){
