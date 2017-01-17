@@ -88,7 +88,7 @@ double ListOfPrices::calculate(string startPoint,string endPoint,int vehicleCate
         return -3; // Nepostojeca izlazna tacka
     result = pricePerVehicleCategory[vehicleCategory-1]*pricePerPoint[endPointIndex][startPointIndex];
     if(result > 0)
-        return result;
+        return result; // Vraca rezultat
     else if(result < 0){
         return -4; // Greska u racunanju
     }
@@ -97,38 +97,7 @@ double ListOfPrices::calculate(string startPoint,string endPoint,int vehicleCate
     }
 };
 void ListOfPrices::updatePrices(){
-    inputFile.open(DEFAULTFILE); // Ucitava se defaultni fajl Prices.txt
-    if(inputFile.is_open()){ // Provjera da li je otvoren dati fajl
-        delete [] pricePerVehicleCategory; // Uklanjanje starih vrijednosti
-        for(int i = 0; i<numberOfPoints; i++)
-            delete[] pricePerPoint[i];
-        delete [] pricePerPoint;
-        delete [] listOfPoints;
-		inputFile >> numberOfCategories; // Upis broja kategorija iz fajla
-        pricePerVehicleCategory = new int[numberOfCategories]; //Kreiranje dinamickog niza za kategorije
-        for(int i = 0; i<numberOfCategories; i++){
-            inputFile >> pricePerVehicleCategory[i]; // Upis cijena po kategoriji iz fajla
-        }
-        inputFile >> numberOfPoints; // Upis broja tacaka (ulazno/izlaznih tacaka izmedju dionica)
-        pricePerPoint = new int*[numberOfPoints]; // Kreiranje matrice za upis cijena po dionici
-        for(int i = 0; i<numberOfPoints; i++){
-            pricePerPoint[i] = new int[numberOfPoints];
-        }
-        for(int i = 0; i<numberOfPoints; i++){
-            for(int j = 0; j<numberOfPoints; j++){
-                inputFile >> pricePerPoint[i][j]; // Upis u matricu za cuvanje cijena po dionicama iz fajla
-            }
-        }
-        listOfPoints = new string[numberOfPoints]; // Kreiranje niza imena tacaka
-        inputFile.ignore(225,'\n'); // Ignorisanje novog reda
-        for(int i = 0; i<numberOfPoints; i++)
-            getline(inputFile, listOfPoints[i],'\n'); // Unos imena tacaka iz fajla, delimiter #
-        inputFile.close(); //Zatvaranje fajla
-    }
-    else{
-        cout << "Fajl se ne moze otvoriti." << endl; //Ukoliko nije moguce otvoriti fajl nece se mijenjati vrijednosti
-        cout << "Vracanje na stare vrijednosti." << endl;
-    }
+    updatePrices(DEFAULTFILE); // Ucitava se defaultni fajl Prices.txt
 };
 void ListOfPrices::updatePrices(string fileLocation){
     inputFile.open(fileLocation.c_str()); //Ucitava se fajl iz lokacije u argumentu
