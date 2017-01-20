@@ -1,23 +1,14 @@
-#include<iostream>
-#include<iomanip>
-#include<fstream>
-#include<cstring>
-#include<stdlib.h>
-#include<conio.h>
-#include"autentifikacija.h"
-#include"forma.h"
-using namespace std;
+#include"form.h"
 string loginform(){
 	int doing=1;
 	int valid=0;						//Pomocna promjenjiva
 	char usernm[255]="";				//String za korisnocko ime
     char passwd[255]="";				//String za lozinku
-	char id[255];                   //Pomocna promjenjiva za odabir opcije u formi za logovanje
+	char id[255];                   	//Pomocna promjenjiva za odabir opcije u formi za logovanje
 	while(doing){						//Petlja koja se izvrsav dok korisnik ne unese ispravne kredencijale ili odluci da napusti program
 		cout<<"\n\t\t\t > > >S.U.M.A< < <\n\n";
 		cout<<"\t\tZa prijavu na sistem pritisnite -----> 1\n\n";		//opcije menija
 		cout<<"\t\tZa izlazak iz programa pritisnite----> 2\n";
-                cout<<"\t\tVas izbor: ";
 		cin>>id;
 		if(strcmp(id,"1")==0){  		//Slucaj da je korisnik odabrao opciju 1
 			int counter=0;				//Postavljanje brojaca na 0
