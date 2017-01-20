@@ -6,7 +6,7 @@
 #include"receipt.h"
 #include"MenuOut.h"
 using namespace std;
-void help(){ 
+void help(){//Funkcija help koja na ekranu ispisuje uputstvo.
 	cout << endl;
 	cout << endl;
 	cout<<"================================================================================";
@@ -17,16 +17,16 @@ void help(){
 	cout<<"================================================================================\n";
 }
 void MenuOut(string Username){
-	int option;
-	int category;
-	bool isendpointSet=false; 
-	string startPoint;
-	string endPoint;
-	string tempstr;
-	string catemp;
-	int counterwh=1,rectemp;
-	int number=0;
-	while(option){
+	int option; //Pomocna promjenjiva za switch.
+	int category;//Pomocna promjenjiva za kategoriju vozila.
+	bool isendpointSet=false; //Promjenjiva za provjeru da li je krajnja tacka upisana.
+	string startPoint;//Promjenjiva za tacku na kojoj je vozac usao.
+	string endPoint;//Promjenjiva za ime radnog mjesta na kojem logovani radnik radi.
+	string tempstr;//Pomocna promjenjiva pomocu koje pravimo opcije imunima na pogresne unose.	
+	string catemp;//Pomocna promjenjiva pomocu koje pravimo opcije imunima na pogresne unose.	
+	int counterwh=1,rectemp;//Pomocne promjenjive za while petlju, i za primanje vrijednosti funkcije receipt.
+	int number=0;//Pomocna promjenjiva za pretvaranje stringa u cio broj.
+	while(option){//Petlja u kojoj se unosi naziv trenutnog radnog mjesta, i izvrsava se samo jednom.
 		if(isendpointSet==false){		
 			cout<<"\t\t\t\t======S.U.M.A.======\n\n\n";
 			cout<<endl<<endl;
@@ -42,7 +42,7 @@ void MenuOut(string Username){
 		cout<<"\t\t\t2.Pomoc\n\n";
 		cout<<"\t\t\t3.Odjava\n\n\n";
 		cout<<"\t Opcija : ";
-		cin>>tempstr;
+		cin>>tempstr;//Ovde se obezbjedjujemo da je je unjeta opcija numericka i da ta opcija postoji u meniju,ostali karakteri bice okarakterisani kao greska.
 		if(tempstr=="1")
 			option=1;
 		else if(tempstr=="2")
@@ -52,26 +52,26 @@ void MenuOut(string Username){
 		else 
 			option=4;
 		switch(option){
-			case 1:{	
+			case 1:{//Opcija 1 za unos podataka.
 				cout<<"\t\t\t < Unos podataka >\n\n";
 				cout<<"\t Kategorija vozila : ";
-				counterwh=1;
+				counterwh=1;//Pomocna promjenjiva za izlaz iz while petlje.
 				while(counterwh){
 					getline(cin,catemp,'\n');
-					for(int i=0;i<catemp.length();++i){
+					for(int i=0;i<catemp.length();++i){//Prolazenje kroz unjeti string i provjera da li je cisto numericki,u slucaju bilo kojih drugi unosa prijavice se greska.
 						if(catemp[i]<'0' || catemp[i]>'9'){
 							cout<<"\n\n \t Sadrzi karakter koji nije cifra, probajte ponovo.\n"<<endl<<endl;
 							cout<<"\t Kategorija vozila : ";
 							counterwh=1;
 							break;
 						}
-						if(i==(catemp.length()-1)){
+						if(i==(catemp.length()-1)){//Izlaz iz petlje kada se dodje do kraja Stringa. 
 							counterwh=0;
 							break;
 						}
 					}
 				}
-				for(int i=0;i<catemp.length()-1;i++){
+				for(int i=0;i<catemp.length()-1;i++){//Pretvaranje stringa sa brojevnim karakterima u int vrijednost.
 					number+=catemp[i]-'0';
 					number*=10;
 				}
@@ -79,11 +79,11 @@ void MenuOut(string Username){
 				category=number;
 				cout<<endl<<endl;
 				cout<<"\t Ulazna tacka : ";
-				getline(cin,startPoint,'\n');
-				rectemp=receipt(Username,startPoint,endPoint,category);
+				getline(cin,startPoint,'\n');//Unos naziva ulazne tacke.
+				rectemp=receipt(Username,startPoint,endPoint,category);//Upis vrijednosti koje vraca funkcija u promjenjivu rectemp.
 				cout<<endl;
 				cout<<endl;
-				switch(rectemp){
+				switch(rectemp){//Ispis u zavisnosti od vracene vrijednosti.
 					case 0:
 						cout<<"\t Uspjesno je napravljen racun\n"<<endl<<endl;
 						break;
@@ -117,7 +117,7 @@ void MenuOut(string Username){
 				return;
 				break;
 			case 4:
-				cout<<"\t !Opcija koju ste unjeli ne postoji!\n\n";
+				cout<<"\t !Opcija koju ste unjeli ne postoji!\n\n";//Ispis u slucajnu nevalidnog unosa.
 				break;
 			default: 
 				option=0;
