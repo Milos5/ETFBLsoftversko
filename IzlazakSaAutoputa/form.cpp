@@ -39,7 +39,7 @@ string loginform(){
 				}
 			}
 			if(authentication(usernm,passwd)!=true)			//Provjera validnosti unosa
-				cout<<"\t Pogresano korisnicko ime ili pogresna lozinka!\n";
+				cout<<"\n\t Pogresano korisnicko ime ili pogresna lozinka!\n\n";
 			else{
 				doing=0;
 				valid=1;
