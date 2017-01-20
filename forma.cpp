@@ -1,3 +1,10 @@
+#include<iostream>
+#include<iomanip>
+#include<fstream>
+#include<cstring>
+#include<stdlib.h>
+#include<conio.h>
+#include"autentifikacija.h"
 #include"forma.h"
 using namespace std;
 string loginform(){
@@ -10,6 +17,7 @@ string loginform(){
 		cout<<"\n\t\t\t > > >S.U.M.A< < <\n\n";
 		cout<<"\t\tZa prijavu na sistem pritisnite -----> 1\n\n";		//opcije menija
 		cout<<"\t\tZa izlazak iz programa pritisnite----> 2\n";
+                cout<<"\t\tVas izbor: ";
 		cin>>id;
 		if(strcmp(id,"1")==0){  		//Slucaj da je korisnik odabrao opciju 1
 			int counter=0;				//Postavljanje brojaca na 0
