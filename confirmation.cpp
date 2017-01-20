@@ -8,7 +8,7 @@ string intToString (int number){ // funkcija za konverziju iz int-a u string
 }
 int confirmation(string username,string startPoint){
     ofstream outputFile; // izlazni fajl
-    string fileLocation; // string koji cuva adresu potvrde
+    string fileLocation; // string koji cuva adresu potvrde o ulasku
     string folder;
     string timeYear; // string koji predstavlja godinu
     string timeMonth; // string koji predstavlja mjesec
@@ -20,7 +20,7 @@ int confirmation(string username,string startPoint){
 
     folder = DEFAULTFOLDER; // folder u kojem se smjestaju fajlovi
 
-    CreateDirectory(folder.c_str(), NULL); // pravi se direktorijum za cuvanje potvrda
+    CreateDirectory(folder.c_str(), NULL); // pravi se direktorijum za cuvanje potvrda o ulasku
 
     time_t t = time(0);   // pribavljanje vremena
     struct tm * now = localtime( & t ); // setovanje u odgovarajuc oblik
