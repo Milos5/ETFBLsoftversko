@@ -1,10 +1,3 @@
-#include<iostream>
-#include<iomanip>
-#include<fstream>
-#include<cstring>
-#include<stdlib.h>
-#include<conio.h>
-#include"autentifikacija.h"
 #include"forma.h"
 using namespace std;
 string loginform(){
