@@ -22,7 +22,7 @@ ListOfPrices::ListOfPrices(){
         listOfPoints = new string[numberOfPoints]; // Kreiranje niza imena tacaka
         inputFile.ignore(225,'\n'); // Ignorisanje novog reda
         for(int i = 0; i<numberOfPoints; i++)
-            getline(inputFile, listOfPoints[i],'\n'); // Unos imena tacaka iz fajla, delimiter #
+            getline(inputFile, listOfPoints[i],'\n'); // Unos imena tacaka iz fajla, delimiter \n
         inputFile.close(); //Zatvaranje fajla
     }
     else{
@@ -52,7 +52,7 @@ ListOfPrices::ListOfPrices(string fileLocation){
         listOfPoints = new string[numberOfPoints]; // Kreiranje niza imena tacaka
         inputFile.ignore(225,'\n'); // Ignorisanje novog reda
         for(int i = 0; i<numberOfPoints; i++)
-            getline(inputFile, listOfPoints[i],'\n'); // Unos imena tacaka iz fajla, delimiter #
+            getline(inputFile, listOfPoints[i],'\n'); // Unos imena tacaka iz fajla, delimiter \n
         inputFile.close(); //Zatvaranje fajla
     }
     else{
@@ -125,7 +125,7 @@ void ListOfPrices::updatePrices(string fileLocation){
         listOfPoints = new string[numberOfPoints]; // Kreiranje niza imena tacaka
         inputFile.ignore(225,'\n'); // Ignorisanje novog reda
         for(int i = 0; i<numberOfPoints; i++)
-            getline(inputFile, listOfPoints[i],'\n'); // Unos imena tacaka iz fajla, delimiter #
+            getline(inputFile, listOfPoints[i],'\n'); // Unos imena tacaka iz fajla, delimiter \n
         inputFile.close(); //Zatvaranje fajla
     }
     else{
