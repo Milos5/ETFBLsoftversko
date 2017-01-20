@@ -1,4 +1,5 @@
 #include "menuIn.h"
+#include "confirmation.h"
 
 void create(string nodeId, string workerId) {
 //kreiranje potvrde o ulasku na autoput
@@ -12,6 +13,10 @@ void create(string nodeId, string workerId) {
         time (&rawTime);
         timeInfo = localtime (&rawTime);
         cout << "\t\tTrenutno vrijeme: " << asctime(timeInfo) << endl;
+        if (confirmation(workerId, nodeId)==0)
+            cout<< "\t\tUspjesno je sacuvana potvrda!";
+        else
+            cout<< "Greska pri cuvanju potvrde!";
 }
 
 void help() {
