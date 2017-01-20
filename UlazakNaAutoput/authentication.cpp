@@ -13,10 +13,10 @@ bool authentication(string user,string pass){
         }
     }
     else{
-	
-        cout << "Fajl se ne moze otvoriti.";
-        
-    
+
+        cout << "\t Fajl se ne moze otvoriti.";
+
+
     }
     in.close();
     return false;

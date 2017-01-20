@@ -12,8 +12,8 @@ int main() {
         userId = loginform();
 
         if (userId!="0"){
-            cout << "\n\n\t\tDobrodosli " << userId << "!\n";
-            cout << "\t\tUnesite ulazni cvor: ";
+            cout << "\n\n\tDobrodosli " << userId << "!\n";
+            cout << "\tUnesite ulazni cvor: ";
             string nodeId = "0";
             cin.get();
             std::getline(std::cin,nodeId, '\n');

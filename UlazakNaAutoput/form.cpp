@@ -6,16 +6,20 @@ string loginform(){
     char passwd[255]="";				//String za lozinku
 	char id[255];                   	//Pomocna promjenjiva za odabir opcije u formi za logovanje
 	while(doing){						//Petlja koja se izvrsav dok korisnik ne unese ispravne kredencijale ili odluci da napusti program
-		cout<<"\n\t\t\t > > >S.U.M.A< < <\n\n";
-		cout<<"\t\tZa prijavu na sistem pritisnite -----> 1\n\n";		//opcije menija
-		cout<<"\t\tZa izlazak iz programa pritisnite----> 2\n";
+		cout<<"\t\t\t\t======S.U.M.A.======\n\n\n";
+        cout<<"\t\t\tOdaberite opciju : \n\n";
+		cout<<"\t\t\t1. Prijava na sistem.\n\n";
+		cout<<"\t\t\t2. Izlazak iz programa.\n\n"; //opcije menija
+		cout<<"\t Opcija : ";
 		cin>>id;
+		cout<<endl;
 		if(strcmp(id,"1")==0){  		//Slucaj da je korisnik odabrao opciju 1
 			int counter=0;				//Postavljanje brojaca na 0
 			char tempCh; 				//Pomocna promjenjiva
-			cout<<"Unesite korisnicko ime:\n";
-			cin>>usernm;				//Unos korisnickog imena
-			cout<<"Unesite lozinku:\n";
+			cout<<"\t Unesite korisnicko ime : ";
+			cin>>usernm;
+			cout<<endl;				//Unos korisnickog imena
+			cout<<"\t Unesite lozinku : ";
 			for(counter=0;;){			//beskonacna petlja
 				tempCh=getch();			//smjestanje znaka ukucanog na tastaturi
 				if((tempCh>='a' && tempCh<='z') || (tempCh>='A' && tempCh<='Z') || (tempCh>='0' && tempCh<='9') || (tempCh=='_')){	//ogranicavanje lozinke na alfanurmericke znakove
@@ -35,7 +39,7 @@ string loginform(){
 				}
 			}
 			if(authentication(usernm,passwd)!=true)			//Provjera validnosti unosa
-				cout<<"\t\tPogresano korisnicko ime ili pogresna lozinka!\n\n";
+				cout<<"\n\t Pogresano korisnicko ime ili pogresna lozinka!\n\n";
 			else{
 				doing=0;
 				valid=1;
@@ -46,7 +50,7 @@ string loginform(){
 			valid=0;
 		}
 		if((strcmp(id,"1")!=0 && strcmp(id,"2")!=0)){		//Ako kosrinisk unese bilo koju opciju koja nije ponudjena menijem
-			cout<<"Nevalidan unos\n\n";
+			cout<<"\t Nevalidan unos.\n\n";
 			valid=0;
 		}
 	}

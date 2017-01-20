@@ -21,12 +21,12 @@ void create(string nodeId, string workerId) {
 
 void help() {
 //pomoc za korisnika
-    cout << endl << endl << "\t\t\tPomoc" << endl << "\t\t\t=====" << endl;
-    cout <<"\t\t\tDobrodosli, hvala sto koristite nasu aplikaciju!" << endl;
-    cout <<"\t\t\tDa biste izdali potvrdu, u meniju unesite 1 i pritisnite enter." << endl;
-    cout <<"\t\t\tOtvorice vam se meni za unos podataka i kreiranje nove potvrde!" << endl << endl;
-    cout <<"\t\t\tDa biste se izlogovali iz aplikacije," << endl;
-    cout <<"\t\t\tu meniju nesite 0 i pritisnite enter.";
+    cout << endl << endl << "\tPomoc" << endl << "\t=====" << endl;
+    cout <<"\tDobrodosli, hvala sto koristite nasu aplikaciju!" << endl;
+    cout <<"\tDa biste izdali potvrdu, u meniju unesite 1 i pritisnite enter." << endl;
+    cout <<"\tOtvorice vam se meni za unos podataka i kreiranje nove potvrde!" << endl << endl;
+    cout <<"\tDa biste se izlogovali iz aplikacije," << endl;
+    cout <<"\tu meniju nesite 0 i pritisnite enter.";
     cout << endl << endl;
 }
 
@@ -36,14 +36,14 @@ void menu(string nodeId, string workerId) {
 //char se koristi kao sprecavanje pogresnog unosa
     char input[10] = {0};
     int select;    //select za switch
-    cout<<"\t\t\t\t  < < < MENU > > >\n\n\n";
+    cout<< endl << "\t\t\t\t  < < < MENU > > >\n\n\n";
     cout<<"\t\t\tOdaberite opciju\n\n";
 //petlja menija, omogucava se visestruko pozivanje menija, dok se ne odabere odjava
     while(select){
         cout << "\t\t\t1. Kreiranje potvrde o ulasku na autoput" << endl;
         cout << "\t\t\t2. Pomoc" << endl;
         cout << "\t\t\t0. Odjava" << endl << endl;
-        cout << "\t\t Vas izbor: ";
+        cout << "\t Vas izbor: ";
         cin >> input;
 //dodjela vrijednosti select, da bi switch radio kako treba
         if(strcmp(input,"1")==0) select=1;
@@ -54,7 +54,7 @@ void menu(string nodeId, string workerId) {
         switch (select) {
             case 0:
                 select = 0;
-                cout << endl << endl <<"\t\t\tOdjava sa sistema" << endl;
+                cout << endl <<"\t\t\tOdjava sa sistema\n" << endl;
                 break;
 
             case 1:
