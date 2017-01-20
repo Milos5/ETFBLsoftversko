@@ -20,7 +20,7 @@ int confirmation(string username,string startPoint){
 
     folder = DEFAULTFOLDER; // folder u kojem se smjestaju fajlovi
 
-    CreateDirectory(folder.c_str(), NULL); // pravi se direktorijum za cuvanje racuna
+    CreateDirectory(folder.c_str(), NULL); // pravi se direktorijum za cuvanje potvrda
 
     time_t t = time(0);   // pribavljanje vremena
     struct tm * now = localtime( & t ); // setovanje u odgovarajuc oblik
@@ -54,5 +54,5 @@ int confirmation(string username,string startPoint){
         outputFile.close();
         return 0;
     }
-        return -1; // ne moze se otvoriti novi racun
+        return -1; // ne moze se otvoriti nova potvrda
 }
