@@ -12,8 +12,9 @@ int main() {
         userId = loginform();
 
         if (userId!="0"){
-            cout << "\n\t Dobrodosli " << userId << ".\n\n";
-            cout << "\t Unesite ulazni cvor : ";
+            cout << "\n\t\t Dobrodosli " << userId << ".\n\n";
+            cout<<"\t\t Unesite radno mjesto na kojem se nalazite."<<endl<<endl;
+            cout<<"\t Cvor : ";
             string nodeId = "0";
             cin.get();
             std::getline(std::cin,nodeId, '\n');
@@ -26,7 +27,7 @@ int main() {
                 menu(nodeId, userId);
         }
         else {
-            cout<<"\t Hvala sto koristite nasu aplikaciju!\n";
+            cout<<"\t\t Hvala sto koristite nasu aplikaciju!\n";
             counter = 0;
         }
     }

@@ -22,7 +22,7 @@ void create(string nodeId, string workerId) {
 
 void help() {
 //pomoc za korisnika
-    cout << endl << "\t Pomoc" << endl << "\t =====" << endl << endl;
+    cout << endl << "\t Pomoc" << endl << "\t =====" << endl;
     cout <<"\t Dobrodosli, hvala sto koristite nasu aplikaciju!" << endl;
     cout <<"\t Da biste izdali potvrdu, u meniju unesite 1 i pritisnite enter." << endl;
     cout <<"\t Otvorice vam se meni za unos podataka i kreiranje nove potvrde." << endl;
