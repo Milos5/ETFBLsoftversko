@@ -8,6 +8,8 @@
 #include<ctime>
 #include <sstream>
 
+using namespace std;
+
 int receipt(string username,string startPoint,string endPoint,int vehicleCategory);
 /*
                 Moguce povrate vrijednosti:
