@@ -75,10 +75,10 @@ double ListOfPrices::calculate(string startPoint,string endPoint,int vehicleCate
     if((vehicleCategory>numberOfCategories)||(vehicleCategory<1))
         return -1; // Nepostojeca kategorija
     for(int i = 0; i < numberOfPoints; i++){ // Pretraga imena dionica kako bi se utvrdio index dionice
-        if(strcmp(startPoint.c_str(),listOfPoints[i].c_str())==0){
+        if(startPoint==listOfPoints[i]){
             startPointIndex = i; //index ulazne tacke
         }
-        if(strcmp(endPoint.c_str(),listOfPoints[i].c_str())==0){
+        if(endPoint==listOfPoints[i]){
             endPointIndex = i; //index izlazne tacke
         }
     }
