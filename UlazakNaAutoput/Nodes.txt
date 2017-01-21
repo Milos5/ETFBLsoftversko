@@ -1,0 +1,4 @@
+cvor 1
+cvor 2
+prvi cvor
+drugi cvor
