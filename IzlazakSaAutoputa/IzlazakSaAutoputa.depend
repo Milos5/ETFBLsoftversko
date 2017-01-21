@@ -1,0 +1,60 @@
+# depslib dependency file v1.0
+1484936070 source:c:\users\ace\git\etfblsoftversko\izlazaksaautoputa\authentication.cpp
+	"authentication.h"
+
+1484932344 c:\users\ace\git\etfblsoftversko\izlazaksaautoputa\authentication.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstring>
+
+1484993580 source:c:\users\ace\git\etfblsoftversko\izlazaksaautoputa\form.cpp
+	"form.h"
+
+1484932344 c:\users\ace\git\etfblsoftversko\izlazaksaautoputa\form.h
+	<iostream>
+	<iomanip>
+	<fstream>
+	<cstring>
+	<stdlib.h>
+	<conio.h>
+	"authentication.h"
+
+1484990577 source:c:\users\ace\git\etfblsoftversko\izlazaksaautoputa\listofprices.cpp
+	"ListOfPrices.h"
+
+1484989997 c:\users\ace\git\etfblsoftversko\izlazaksaautoputa\listofprices.h
+	<iostream>
+	<fstream>
+	<cstring>
+
+1484946116 source:c:\users\ace\git\etfblsoftversko\izlazaksaautoputa\main.cpp
+	<iostream>
+	"menuOut.h"
+	"form.h"
+
+1484934972 c:\users\ace\git\etfblsoftversko\izlazaksaautoputa\menuout.h
+	<cstring>
+	<iostream>
+	<iomanip>
+	<fstream>
+	<conio.h>
+	"receipt.h"
+
+1484932344 c:\users\ace\git\etfblsoftversko\izlazaksaautoputa\receipt.h
+	<iostream>
+	"ListOfPrices.h"
+	<fstream>
+	<string>
+	<windows.h>
+	<ctime>
+	<sstream>
+
+1484992909 source:c:\users\ace\git\etfblsoftversko\izlazaksaautoputa\menuout.cpp
+	"MenuOut.h"
+
+1484932344 source:c:\users\ace\git\etfblsoftversko\izlazaksaautoputa\receipt.cpp
+	"receipt.h"
+
+1484945953 source:c:\users\ace\git\etfblsoftversko\izlazaksaautoputa\resource.rc
+

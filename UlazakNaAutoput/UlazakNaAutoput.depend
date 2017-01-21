@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1484939409 source:c:\users\ace\git\etfblsoftversko\ulazaknaautoput\authentication.cpp
+	"authentication.h"
+
+1484932344 c:\users\ace\git\etfblsoftversko\ulazaknaautoput\authentication.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstring>
+
+1484932344 source:c:\users\ace\git\etfblsoftversko\ulazaknaautoput\confirmation.cpp
+	"confirmation.h"
+
+1484932344 c:\users\ace\git\etfblsoftversko\ulazaknaautoput\confirmation.h
+	<iostream>
+	<fstream>
+	<string>
+	<windows.h>
+	<ctime>
+	<sstream>
+
+1484993602 source:c:\users\ace\git\etfblsoftversko\ulazaknaautoput\form.cpp
+	"form.h"
+
+1484932344 c:\users\ace\git\etfblsoftversko\ulazaknaautoput\form.h
+	<iostream>
+	<iomanip>
+	<fstream>
+	<cstring>
+	<stdlib.h>
+	<conio.h>
+	"authentication.h"
+
+1484943935 source:c:\users\ace\git\etfblsoftversko\ulazaknaautoput\main.cpp
+	"form.h"
+	"authentication.h"
+	"menuIn.h"
+
+1484932344 c:\users\ace\git\etfblsoftversko\ulazaknaautoput\menuin.h
+	<iostream>
+	<string>
+	<cstring>
+	<cstdlib>
+	<ctime>
+	<fstream>
+
+1484943385 source:c:\users\ace\git\etfblsoftversko\ulazaknaautoput\menuin.cpp
+	"menuIn.h"
+	"confirmation.h"
+
+1484945953 source:c:\users\ace\git\etfblsoftversko\ulazaknaautoput\resource.rc
+

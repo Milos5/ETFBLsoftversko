@@ -1,0 +1,7 @@
+Radnik:a
+Ulazna tacka:Vrbas
+Izlazna tacka:Beograd-sever
+Kategorija voizla: 2
+Cijena: 2.1
+Vrijeme izdavanja: 13:16:18
+Datum izdavanja: 21.01.2017.
