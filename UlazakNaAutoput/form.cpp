@@ -39,7 +39,7 @@ string loginform(){
 				}
 			}
 			if(authentication(usernm,passwd)!=true)			//Provjera validnosti unosa
-				cout<<"\n\t Pogresano korisnicko ime ili pogresna lozinka!\n\n";
+				cout<<"\n\t Pogresan korisnicko ime ili pogresna lozinka!\n\n";
 			else{
 				doing=0;
 				valid=1;
@@ -54,6 +54,7 @@ string loginform(){
 			valid=0;
 		}
 	}
+	cin.ignore();
 	if(valid==1)
         return string(usernm); //vraca korisnicko ime korisnika koji se uspjenso logovao na sistem
     return "0"; //vraca string "0" ukoliko je korisnik izabrao opciju za izlaz
