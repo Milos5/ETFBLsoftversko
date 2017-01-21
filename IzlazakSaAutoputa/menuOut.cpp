@@ -15,7 +15,7 @@ void help(){//Funkcija help koja na ekranu ispisuje uputstvo.
 	cout<<endl<<endl;
 }
 void menuOut(string Username){
-	int option; //Pomocna promjenjiva za switch.
+	int option=1; //Pomocna promjenjiva za switch.
 	int category;//Pomocna promjenjiva za kategoriju vozila.
 	bool isendpointSet=false; //Promjenjiva za provjeru da li je krajnja tacka upisana.
 	string startPoint;//Promjenjiva za tacku na kojoj je vozac usao.
