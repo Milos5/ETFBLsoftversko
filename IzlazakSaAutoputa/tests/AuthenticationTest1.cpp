@@ -24,7 +24,7 @@ void testAuthentication() {
     string p1="nikola93";
     bool result = authentication(p0, p1);
     if (result == false) {
-        std::cout << "%TEST_FAILED% time=0 testname=testAuthentication (AuthenticationTest1) message=error message sample" << std::endl;
+        std::cout << "%TEST_FAILED% time=0 testname=testAuthentication (AuthenticationTest1) message=Neuspijesan login" << std::endl;
     }
 }
 
