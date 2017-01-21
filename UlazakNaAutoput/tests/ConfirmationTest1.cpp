@@ -24,7 +24,7 @@ void testConfirmation() {
     string startPoint ("Vrbas");
     int result = confirmation(username, startPoint);
     if ( result == -1 ) {
-        std::cout << "%TEST_FAILED% time=0 testname=testConfirmation (ConfirmationTest1) message=error message sample" << std::endl;
+        std::cout << "%TEST_FAILED% time=0 testname=testConfirmation (ConfirmationTest1) message= Potvrda nije sacuvana" << std::endl;
     }
 }
 
