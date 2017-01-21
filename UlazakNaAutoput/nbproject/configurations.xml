@@ -4,15 +4,24 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>authentication.h</itemPath>
+      <itemPath>confirmation.h</itemPath>
+      <itemPath>form.h</itemPath>
+      <itemPath>menuIn.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
+      <itemPath>resource.rc</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>authentication.cpp</itemPath>
+      <itemPath>confirmation.cpp</itemPath>
+      <itemPath>form.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>menuIn.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -42,6 +51,14 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="authentication.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="authentication.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="confirmation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="confirmation.h" ex="false" tool="3" flavor2="0">
+      </item>
       <folder path="TestFiles/f1">
         <cTool>
           <incDir>
@@ -57,7 +74,17 @@
           <output>${TESTDIR}/TestFiles/f1</output>
         </linkerTool>
       </folder>
+      <item path="form.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="form.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="menuIn.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="menuIn.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resource.rc" ex="false" tool="3" flavor2="0">
       </item>
       <item path="tests/newsimpletest.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -82,6 +109,14 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="authentication.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="authentication.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="confirmation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="confirmation.h" ex="false" tool="3" flavor2="0">
+      </item>
       <folder path="TestFiles/f1">
         <cTool>
           <incDir>
@@ -97,7 +132,17 @@
           <output>${TESTDIR}/TestFiles/f1</output>
         </linkerTool>
       </folder>
+      <item path="form.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="form.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="menuIn.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="menuIn.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resource.rc" ex="false" tool="3" flavor2="0">
       </item>
       <item path="tests/newsimpletest.cpp" ex="false" tool="1" flavor2="0">
       </item>

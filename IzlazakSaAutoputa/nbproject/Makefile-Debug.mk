@@ -34,7 +34,13 @@ include Makefile
 OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
-OBJECTFILES=
+OBJECTFILES= \
+	${OBJECTDIR}/ListOfPrices.o \
+	${OBJECTDIR}/authentication.o \
+	${OBJECTDIR}/form.o \
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/menuOut.o \
+	${OBJECTDIR}/receipt.o
 
 # Test Directory
 TESTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tests
@@ -71,6 +77,36 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/izlazaksaautoputa.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/izlazaksaautoputa ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/ListOfPrices.o: ListOfPrices.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListOfPrices.o ListOfPrices.cpp
+
+${OBJECTDIR}/authentication.o: authentication.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/authentication.o authentication.cpp
+
+${OBJECTDIR}/form.o: form.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/form.o form.cpp
+
+${OBJECTDIR}/main.o: main.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/menuOut.o: menuOut.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/menuOut.o menuOut.cpp
+
+${OBJECTDIR}/receipt.o: receipt.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/receipt.o receipt.cpp
+
 # Subprojects
 .build-subprojects:
 
@@ -88,6 +124,84 @@ ${TESTDIR}/tests/newsimpletest.o: tests/newsimpletest.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I. -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/newsimpletest.o tests/newsimpletest.cpp
 
+
+${OBJECTDIR}/ListOfPrices_nomain.o: ${OBJECTDIR}/ListOfPrices.o ListOfPrices.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/ListOfPrices.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListOfPrices_nomain.o ListOfPrices.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/ListOfPrices.o ${OBJECTDIR}/ListOfPrices_nomain.o;\
+	fi
+
+${OBJECTDIR}/authentication_nomain.o: ${OBJECTDIR}/authentication.o authentication.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/authentication.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/authentication_nomain.o authentication.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/authentication.o ${OBJECTDIR}/authentication_nomain.o;\
+	fi
+
+${OBJECTDIR}/form_nomain.o: ${OBJECTDIR}/form.o form.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/form.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/form_nomain.o form.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/form.o ${OBJECTDIR}/form_nomain.o;\
+	fi
+
+${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/main.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main_nomain.o main.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/main.o ${OBJECTDIR}/main_nomain.o;\
+	fi
+
+${OBJECTDIR}/menuOut_nomain.o: ${OBJECTDIR}/menuOut.o menuOut.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/menuOut.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/menuOut_nomain.o menuOut.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/menuOut.o ${OBJECTDIR}/menuOut_nomain.o;\
+	fi
+
+${OBJECTDIR}/receipt_nomain.o: ${OBJECTDIR}/receipt.o receipt.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/receipt.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/receipt_nomain.o receipt.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/receipt.o ${OBJECTDIR}/receipt_nomain.o;\
+	fi
 
 # Run Test Targets
 .test-conf:
