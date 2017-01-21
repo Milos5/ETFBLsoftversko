@@ -1,4 +1,6 @@
-cvor 1
-cvor 2
-prvi cvor
-drugi cvor
+Vrbas
+Novi Sad
+Beograd-sever
+Beograd-jug
+Jagodina
+Nis
