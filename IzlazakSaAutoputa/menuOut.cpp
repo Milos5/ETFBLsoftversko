@@ -29,7 +29,6 @@ void menuOut(string Username){
 		if(isendpointSet==false){
 			cout<<"\t\t Unesite radno mjesto na kojem se nalazite."<<endl<<endl;
 			cout<<"\t Cvor : ";
-			cin.ignore();
 			getline(cin,endPoint,'\n');
 			isendpointSet=true;
 			cout<<endl<<endl;
@@ -93,7 +92,12 @@ void menuOut(string Username){
 						cout<<"\t Ulazna tacka nije pronadjena.\n"<<endl;
 						break;
 					case -3:
-						cout<<"\t Izlazna tacka nije pronadjena.\n"<<endl;
+						cout<<"\t Izlazna tacka nije pronadjena.\n"<<endl<<endl;
+						cout<<"\t\t Unesite radno mjesto na kojem se nalazite."<<endl<<endl;
+                        cout<<"\t Cvor : ";
+                        getline(cin,endPoint,'\n');
+                        isendpointSet=true;
+                        cout<<endl<<endl;
 						break;
 					case -4:
 						cout<<"\t Doslo je do greske u racunanju (rezultat negativna vrijednost).\n"<<endl;

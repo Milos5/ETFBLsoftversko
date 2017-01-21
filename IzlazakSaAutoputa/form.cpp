@@ -54,6 +54,7 @@ string loginform(){
 			valid=0;
 		}
 	}
+	cin.ignore();
 	if(valid==1)
         return string(usernm); //vraca korisnicko ime korisnika koji se uspjenso logovao na sistem
     return "0"; //vraca string "0" ukoliko je korisnik izabrao opciju za izlaz
