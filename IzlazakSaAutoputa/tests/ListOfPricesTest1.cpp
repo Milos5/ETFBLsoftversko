@@ -15,22 +15,39 @@
 #include <iostream>
 #include "ListOfPrices.h"
 
+using namespace std;
+
+
 /*
  * Simple C++ Test Suite
  */
 
 void testListOfPrices() {
-    string fileLocation="C:\\Users\\Ace\\git\\ETFBLsoftversko\\IzlazakSaAutoputa\\Prices.txt";
-    ListOfPrices* list = new ListOfPrices(fileLocation);
-    if (list==NULL) {
-        std::cout << "%TEST_FAILED% time=0 testname=testListOfPrices (ListOfPrices) message=Objekat nije napravljen" << std::endl;
-    }
-    string startPoint="Vrbas";
-    string endPoint="Novi Sad";
+    string fileName="Prices.txt";
+    string startPoint="Novi Sad";
+    string endPoint="Nis";
     int vehicleCategory=2;
+    double expectedResult=3;
+    ListOfPrices* list = new ListOfPrices(fileName);
+    if (list==NULL) {
+        cout << "%TEST_FAILED% time=0 testname=testListOfPrices (ListOfPrices) message=Objekat nije napravljen" << endl;
+    }
     double result = list->calculate(startPoint, endPoint, vehicleCategory);
-    if (result - 1.8 > 0.0001) {
-        std::cout << "%TEST_FAILED% time=0 testname=testCalculate (ListOfPrices) message=Greska u racunanju" << std::endl;
+    cout << result;
+    if ((result != expectedResult)||(result==0)) {
+        cout << "%TEST_FAILED% time=0 testname=testCalculate (ListOfPrices) message=Greska u racunanju" << endl;
+    }
+    if (result == -1) {
+        cout << "%TEST_FAILED% time=0 testname=testCalculate (ListOfPrices) message=Kategorija nije pronadjena u cjenovniku" << endl;
+    }
+    if (result == -2){
+        cout << "%TEST_FAILED% time=0 testname=testCalculate (ListOfPrices) message=Ulazna tacka nije pronadjena u cjenovniku" << endl;
+    }
+    if (result == -3){
+        cout << "%TEST_FAILED% time=0 testname=testCalculate (ListOfPrices) message=Izlazna tacka nije pronadjena u cjenovniku" << endl;
+    }
+    if (result == -5){
+        cout << "%TEST_FAILED% time=0 testname=testCalculate (ListOfPrices) message=Nadjene su identicne tacke(ulazna tacka je izlazna tacka" << endl;
     }
 }
 
