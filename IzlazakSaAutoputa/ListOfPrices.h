@@ -9,9 +9,9 @@ using namespace std;
 class ListOfPrices{
     private:
         int numberOfCategories;
-        int* pricePerVehicleCategory;
+        double* pricePerVehicleCategory;
         int numberOfPoints;
-        int** pricePerPoint;
+        double** pricePerPoint;
         string* listOfPoints;
         ifstream inputFile;
     public:

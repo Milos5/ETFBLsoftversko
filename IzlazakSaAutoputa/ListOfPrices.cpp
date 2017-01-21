@@ -5,14 +5,14 @@ ListOfPrices::ListOfPrices(){
     inputFile.open(DEFAULTFILE); // Ucitava se defaultni fajl Prices.txt
     if(inputFile.is_open()){ // Provjera da li je otvoren dati fajl
 		inputFile >> numberOfCategories; // Upis broja kategorija iz fajla
-        pricePerVehicleCategory = new int[numberOfCategories]; //Kreiranje dinamickog niza za kategorije
+        pricePerVehicleCategory = new double[numberOfCategories]; //Kreiranje dinamickog niza za kategorije
         for(int i = 0; i<numberOfCategories; i++){
             inputFile >> pricePerVehicleCategory[i]; // Upis cijena po kategoriji iz fajla
         }
         inputFile >> numberOfPoints; // Upis broja tacaka (ulazno/izlaznih tacaka izmedju dionica)
-        pricePerPoint = new int*[numberOfPoints]; // Kreiranje matrice za upis cijena po dionici
+        pricePerPoint = new double*[numberOfPoints]; // Kreiranje matrice za upis cijena po dionici
         for(int i = 0; i<numberOfPoints; i++){
-            pricePerPoint[i] = new int[numberOfPoints];
+            pricePerPoint[i] = new double[numberOfPoints];
         }
         for(int i = 0; i<numberOfPoints; i++){
             for(int j = 0; j<numberOfPoints; j++){
@@ -35,14 +35,14 @@ ListOfPrices::ListOfPrices(string fileLocation){
     inputFile.open(fileLocation.c_str()); //Ucitava se fajl iz lokacije u argumentu
     if(inputFile.is_open()){ // Provjera da li je otvoren dati fajl
 		inputFile >> numberOfCategories; // Upis broja kategorija iz fajla
-        pricePerVehicleCategory = new int[numberOfCategories]; //Kreiranje dinamickog niza za kategorije
+        pricePerVehicleCategory = new double[numberOfCategories]; //Kreiranje dinamickog niza za kategorije
         for(int i = 0; i<numberOfCategories; i++){
             inputFile >> pricePerVehicleCategory[i]; // Upis cijena po kategoriji iz fajla
         }
         inputFile >> numberOfPoints; // Upis broja tacaka (ulazno/izlaznih tacaka izmedju dionica)
-        pricePerPoint = new int*[numberOfPoints]; // Kreiranje matrice za upis cijena po dionici
+        pricePerPoint = new double*[numberOfPoints]; // Kreiranje matrice za upis cijena po dionici
         for(int i = 0; i<numberOfPoints; i++){
-            pricePerPoint[i] = new int[numberOfPoints];
+            pricePerPoint[i] = new double[numberOfPoints];
         }
         for(int i = 0; i<numberOfPoints; i++){
             for(int j = 0; j<numberOfPoints; j++){
@@ -71,7 +71,7 @@ ListOfPrices::~ListOfPrices(){ // Unistavanje dinamickih nizova
 double ListOfPrices::calculate(string startPoint,string endPoint,int vehicleCategory){
     int startPointIndex = -1; // pocetna vrijednost za ulaznu tacku
     int endPointIndex = -1; // pocetna vrijednost za izlaznu tacku
-    int result = 0;
+    double result = 0;
     if((vehicleCategory>numberOfCategories)||(vehicleCategory<1))
         return -1; // Nepostojeca kategorija
     for(int i = 0; i < numberOfPoints; i++){ // Pretraga imena dionica kako bi se utvrdio index dionice
@@ -108,14 +108,14 @@ void ListOfPrices::updatePrices(string fileLocation){
         delete [] pricePerPoint;
         delete [] listOfPoints;
 		inputFile >> numberOfCategories; // Upis broja kategorija iz fajla
-        pricePerVehicleCategory = new int[numberOfCategories]; //Kreiranje dinamickog niza za kategorije
+        pricePerVehicleCategory = new double[numberOfCategories]; //Kreiranje dinamickog niza za kategorije
         for(int i = 0; i<numberOfCategories; i++){
             inputFile >> pricePerVehicleCategory[i]; // Upis cijena po kategoriji iz fajla
         }
         inputFile >> numberOfPoints; // Upis broja tacaka (ulazno/izlaznih tacaka izmedju dionica)
-        pricePerPoint = new int*[numberOfPoints]; // Kreiranje matrice za upis cijena po dionici
+        pricePerPoint = new double*[numberOfPoints]; // Kreiranje matrice za upis cijena po dionici
         for(int i = 0; i<numberOfPoints; i++){
-            pricePerPoint[i] = new int[numberOfPoints];
+            pricePerPoint[i] = new double[numberOfPoints];
         }
         for(int i = 0; i<numberOfPoints; i++){
             for(int j = 0; j<numberOfPoints; j++){
