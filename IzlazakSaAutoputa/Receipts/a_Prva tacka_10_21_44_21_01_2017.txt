@@ -1,7 +1,0 @@
-Radnik:a
-Ulazna tacka:Druga tacka
-Izlazna tacka:Prva tacka
-Kategorija voizla: 1
-Cijena: 2
-Vrijeme izdavanja: 10:21:44
-Datum izdavanja: 21.01.2017.
